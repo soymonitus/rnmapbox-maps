@@ -44,6 +44,11 @@ const withCocoaPodsInstallerBlocks = (c, { RNMapboxMapsImpl, RNMapboxMapsDownloa
 function applyCocoaPodsModifications(contents, { RNMapboxMapsImpl, RNMapboxMapsDownloadToken }) {
     // Ensure installer blocks exist
     let src = addConstantBlock(contents, RNMapboxMapsImpl, RNMapboxMapsDownloadToken);
+    let re = /:deterministic_uuids => false/gi;
+    src = src.replace(
+      re,
+      ':deterministic_uuids => false, :disable_input_output_paths => true',
+    );
     src = addInstallerBlock(src, 'pre');
     src = addInstallerBlock(src, 'post');
     src = addMapboxInstallerBlock(src, 'pre');
