@@ -88,7 +88,8 @@ export function applyCocoaPodsModifications(
   src = addInstallerBlock(src, 'pre');
   src = addInstallerBlock(src, 'post');
   src = addMapboxInstallerBlock(src, 'pre');
-  src = addMapboxInstallerBlock(src, 'post');
+  // src = addMapboxInstallerBlock(src, 'post');
+  src = addMapboxSetTargetBlock(src);
   return src;
 }
 
@@ -164,6 +165,26 @@ export function addMapboxInstallerBlock(
     src,
     newSrc: `    $RNMapboxMaps.${blockName}_install(installer)`,
     anchor: new RegExp(`^\\s*${blockName}_install do \\|installer\\|`),
+    offset: 1,
+    comment: '#',
+  }).contents;
+}
+export function addMapboxSetTargetBlock(
+    src: string,
+): string {
+  return mergeContents({
+    tag: `@rnmapbox/maps-post_installer`,
+    src,
+    newSrc: `    $RNMapboxMaps.post_install(installer)
+    installer.pods_project.targets.each do |target|
+         target.build_configurations.each do |config|
+            if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 13.0
+              config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+            end
+         end
+     end
+`,
+    anchor: new RegExp(`^\\s*post_installer_install do \\|installer\\|`),
     offset: 1,
     comment: '#',
   }).contents;

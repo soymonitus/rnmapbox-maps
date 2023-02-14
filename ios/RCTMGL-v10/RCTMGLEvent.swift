@@ -38,6 +38,9 @@ class RCTMGLEvent : NSObject, RCTMGLEventProtocol {
       case onUserTrackingModeChange
       case vectorSourceLayerPress
       case shapeSourceLayerPress
+      case navigationShowResumeButton
+      case navigationDidArrive
+      case navigationUpdateNavigationInfo
     }
     
     init(type: EventType, payload: [String:Any]?) {

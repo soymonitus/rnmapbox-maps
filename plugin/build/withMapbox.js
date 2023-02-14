@@ -52,7 +52,8 @@ function applyCocoaPodsModifications(contents, { RNMapboxMapsImpl, RNMapboxMapsD
     src = addInstallerBlock(src, 'pre');
     src = addInstallerBlock(src, 'post');
     src = addMapboxInstallerBlock(src, 'pre');
-    src = addMapboxInstallerBlock(src, 'post');
+    // src = addMapboxInstallerBlock(src, 'post');
+    src = addMapboxSetTargetBlock(src);
     return src;
 }
 exports.applyCocoaPodsModifications = applyCocoaPodsModifications;
@@ -121,6 +122,25 @@ function addMapboxInstallerBlock(src, blockName) {
     }).contents;
 }
 exports.addMapboxInstallerBlock = addMapboxInstallerBlock;
+function addMapboxSetTargetBlock(src) {
+    return (0, generateCode_1.mergeContents)({
+        tag: `@rnmapbox/maps-post_installer`,
+        src,
+        newSrc: `    $RNMapboxMaps.post_install(installer)
+    installer.pods_project.targets.each do |target|
+         target.build_configurations.each do |config|
+            if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 13.0
+              config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+            end
+         end
+     end
+`,
+        anchor: new RegExp(`^\\s*post_install do \\|installer\\|`),
+        offset: 1,
+        comment: '#',
+    }).contents;
+}
+exports.addMapboxSetTargetBlock = addMapboxSetTargetBlock;
 /**
  * Exclude building for arm64 on simulator devices in the pbxproj project.
  * Without this, production builds targeting simulators will fail.

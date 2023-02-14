@@ -320,6 +320,15 @@ declare namespace MapboxGL {
     ): void;
   }
 
+  export type VoiceMutedResult = {
+    isVoiceMuted: boolean
+  }
+
+  export class MapNavigationView extends Component<MapNavigationViewProps> {
+    setVoiceMuted(voiceMuted: boolean): void;
+    isVoiceMuted(): Promise<VoiceMutedResult>;
+  }
+
   type Padding = number | [number, number] | [number, number, number, number];
 
   class UserLocation extends Component<UserLocationProps> {}
@@ -589,6 +598,43 @@ export interface MapViewProps extends ViewProps {
   onUserTrackingModeChange?: () => void;
 }
 
+export type ShowResumeButtonCallback = (
+    event: MapboxGLEvent<
+        'navigationShowResumeButton',
+        {
+          showResumeButton: boolean,
+        }
+    >,
+) => void;
+
+export type DidArriveCallback = (
+    event: MapboxGLEvent<
+        'navigationDidArrive',
+        {
+        }
+    >,
+) => void;
+
+export type UpdateNavigationInfoCallback = (
+    event: MapboxGLEvent<
+        'navigationUpdateNavigationInfo',
+        {
+          distanceRemaining: number,
+          durationRemaining: number,
+        }
+    >,
+) => void;
+
+export interface MapNavigationViewProps extends ViewProps {
+  fromLatitude?: number;
+  fromLongitude?: number;
+  toLatitude?: number;
+  toLongitude?: number;
+  onShowResumeButton?: ShowResumeButtonCallback;
+  onDidArrive?: DidArriveCallback;
+  onUpdateNavigationInfo?: UpdateNavigationInfoCallback;
+}
+
 export interface UserLocationProps {
   androidRenderMode?: 'normal' | 'compass' | 'gps';
   animated?: boolean;
@@ -793,6 +839,7 @@ export class Logger {
 }
 
 export import MapView = MapboxGL.MapView;
+export import MapNavigationView = MapboxGL.MapNavigationView;
 
 export import Camera = MapboxGL.Camera;
 export import CameraStop = MapboxGL.CameraStop;

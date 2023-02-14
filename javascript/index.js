@@ -3,6 +3,7 @@ import { NativeModules } from 'react-native';
 import { Camera, UserTrackingMode } from './components/Camera';
 import { Atmosphere } from './components/Atmosphere';
 import MapView from './components/MapView';
+import MapNavigationView from './components/MapNavigationView';
 import Light from './components/Light';
 import PointAnnotation from './components/PointAnnotation';
 import Annotation from './components/annotations/Annotation';
@@ -50,6 +51,7 @@ MapboxGL.UserTrackingModes = UserTrackingMode;
 
 // components
 MapboxGL.MapView = MapView;
+MapboxGL.MapNavigationView = MapNavigationView;
 MapboxGL.Light = Light;
 MapboxGL.PointAnnotation = PointAnnotation;
 MapboxGL.Callout = Callout;
@@ -116,6 +118,7 @@ const AnimatedMapPoint = AnimatedPoint; // For backwards compatibiilty.
 
 export {
   MapView,
+  MapNavigationView,
   Light,
   PointAnnotation,
   Callout,

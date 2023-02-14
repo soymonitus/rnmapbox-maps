@@ -112,6 +112,9 @@
 		C425670F2996B37400F5A46D /* RCTMGLStyleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42566A52996B37400F5A46D /* RCTMGLStyleValue.swift */; };
 		C42567102996B37400F5A46D /* RCTMGLShapeSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42566A62996B37400F5A46D /* RCTMGLShapeSourceManager.swift */; };
 		C42567112996B37400F5A46D /* RCTMGLSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42566A72996B37400F5A46D /* RCTMGLSource.swift */; };
+		C489F909299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C489F906299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.swift */; };
+		C489F90A299AA19500E9EEAD /* RCTMGLMapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C489F907299AA19500E9EEAD /* RCTMGLMapNavigationView.swift */; };
+		C489F90B299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C489F908299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,6 +227,9 @@
 		C42566A52996B37400F5A46D /* RCTMGLStyleValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTMGLStyleValue.swift; sourceTree = "<group>"; };
 		C42566A62996B37400F5A46D /* RCTMGLShapeSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTMGLShapeSourceManager.swift; sourceTree = "<group>"; };
 		C42566A72996B37400F5A46D /* RCTMGLSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTMGLSource.swift; sourceTree = "<group>"; };
+		C489F906299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTMGLMapNavigationViewManager.swift; sourceTree = "<group>"; };
+		C489F907299AA19500E9EEAD /* RCTMGLMapNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTMGLMapNavigationView.swift; sourceTree = "<group>"; };
+		C489F908299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTMGLMapNavigationViewManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +316,9 @@
 				C425664A2996B37000F5A46D /* RCTMGLLocationModule.swift */,
 				C425666C2996B37200F5A46D /* RCTMGLLogging.m */,
 				C42566492996B37000F5A46D /* RCTMGLLogging.swift */,
+				C489F907299AA19500E9EEAD /* RCTMGLMapNavigationView.swift */,
+				C489F908299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.m */,
+				C489F906299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.swift */,
 				C425664B2996B37000F5A46D /* RCTMGLMapView.swift */,
 				C42566602996B37100F5A46D /* RCTMGLMapViewManager.m */,
 				C425667A2996B37200F5A46D /* RCTMGLMapViewManager.swift */,
@@ -460,6 +469,7 @@
 				C42566F12996B37400F5A46D /* RCTMGLAtmosphereManager.m in Sources */,
 				C42566BF2996B37400F5A46D /* RCTMGLOfflineModule.m in Sources */,
 				C42566B02996B37400F5A46D /* RCTMGLImageSourceManager.swift in Sources */,
+				C489F909299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.swift in Sources */,
 				C42566B42996B37400F5A46D /* RNMBImageUtils.swift in Sources */,
 				C42566E92996B37400F5A46D /* RCTMGLLineLayer.swift in Sources */,
 				C42566AF2996B37400F5A46D /* RCTMGLFillExtrusionLayerManager.swift in Sources */,
@@ -495,6 +505,7 @@
 				C42566D32996B37400F5A46D /* RCTMGLBackgroundLayerManager.m in Sources */,
 				C42566AD2996B37400F5A46D /* RCTMGLLineLayerManager.swift in Sources */,
 				C42566B62996B37400F5A46D /* RCTMGLLocationModule.swift in Sources */,
+				C489F90B299AA19500E9EEAD /* RCTMGLMapNavigationViewManager.m in Sources */,
 				C42566F92996B37400F5A46D /* RCTMGLLightManager.swift in Sources */,
 				C42566EC2996B37400F5A46D /* RCTMGLVectorSource.swift in Sources */,
 				C42566B82996B37400F5A46D /* RCTMGLImageSourceManager.m in Sources */,
@@ -553,6 +564,7 @@
 				C42566C02996B37400F5A46D /* RCTMGLFeatureUtils.swift in Sources */,
 				C42566B52996B37400F5A46D /* RCTMGLLogging.swift in Sources */,
 				C425670C2996B37400F5A46D /* RCTMGLMarkerView.swift in Sources */,
+				C489F90A299AA19500E9EEAD /* RCTMGLMapNavigationView.swift in Sources */,
 				C42566E72996B37400F5A46D /* RCTSwiftLog.m in Sources */,
 				C42566D42996B37400F5A46D /* RCTMGLTerrain.swift in Sources */,
 				C42566B12996B37400F5A46D /* RCTMGLCameraManager.swift in Sources */,
