@@ -7,10 +7,7 @@ import {
   requireNativeComponent,
 } from 'react-native';
 
-import {
-  isFunction,
-  viewPropTypes,
-} from '../utils';
+import { isFunction, viewPropTypes } from '../utils';
 
 import NativeBridgeComponent from './NativeBridgeComponent';
 
@@ -47,8 +44,7 @@ class MapNavigationView extends NativeBridgeComponent(
     onUpdateNavigationInfo: PropTypes.func,
   };
 
-  static defaultProps = {
-  };
+  static defaultProps = {};
 
   constructor(props) {
     super(props);
@@ -67,11 +63,9 @@ class MapNavigationView extends NativeBridgeComponent(
     this._onLayout = this._onLayout.bind(this);
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
-  componentWillUnmount() {
-  }
+  componentWillUnmount() {}
 
   async setVoiceMuted(voiceMuted = false) {
     const res = await this._runNativeCommand('setVoiceMuted', this._nativeRef, [
@@ -96,9 +90,9 @@ class MapNavigationView extends NativeBridgeComponent(
     }
   }
 
-  _onUpdateNavigationInfo(payload) {
+  _onUpdateNavigationInfo(e) {
     if (isFunction(this.props.onUpdateNavigationInfo)) {
-      this.props.onUpdateNavigationInfo(payload);
+      this.props.onUpdateNavigationInfo(e.nativeEvent.payload);
     }
   }
 
@@ -148,10 +142,10 @@ class MapNavigationView extends NativeBridgeComponent(
     };
 
     let mapView = (
-        <RCTMGLMapNavigationView {...props} {...callbacks}>
-          {this.props.children}
-        </RCTMGLMapNavigationView>
-      );
+      <RCTMGLMapNavigationView {...props} {...callbacks}>
+        {this.props.children}
+      </RCTMGLMapNavigationView>
+    );
 
     return (
       <View
@@ -165,8 +159,12 @@ class MapNavigationView extends NativeBridgeComponent(
   }
 }
 
-const RCTMGLMapNavigationView = requireNativeComponent(NATIVE_MODULE_NAME, MapNavigationView, {
-  nativeOnly: { },
-});
+const RCTMGLMapNavigationView = requireNativeComponent(
+  NATIVE_MODULE_NAME,
+  MapNavigationView,
+  {
+    nativeOnly: {},
+  },
+);
 
 export default MapNavigationView;
