@@ -16,8 +16,8 @@ assignees: ''
 ```sh   
 react-native init sample --version react-native@0.60.5
 cd sample
-npm install rnmapbox/maps#main --save
-# or released version `npm install @rnmapbox/maps@8.0.0-rc1 --save`
+npm install mothership/mapbox-react-native#main --save
+# or released version `npm install @mothership/mapbox-react-native@8.0.0-rc1 --save`
 react-native run-android
 ```
 

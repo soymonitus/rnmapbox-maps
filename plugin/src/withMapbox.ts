@@ -21,10 +21,10 @@ import {
 } from './generateCode';
 
 let pkg: { name: string; version?: string } = {
-  name: '@rnmapbox/maps',
+  name: '@mothership/mapbox-react-native',
 };
 try {
-  pkg = require('@rnmapbox/maps/package.json');
+  pkg = require('@mothership/mapbox-react-native/package.json');
 } catch {
   // empty catch block
 }
@@ -40,7 +40,7 @@ export type MapboxPlugProps = {
  * Dangerously adds the custom installer hooks to the Podfile.
  * In the future this should be removed in favor of some custom hooks provided by Expo autolinking.
  *
- * https://github.com/rnmapbox/maps/blob/main/ios/install.md#react-native--0600
+ * https://github.com/mothership/mapbox-react-native/blob/main/ios/install.md#react-native--0600
  * @param config
  * @returns
  */
@@ -82,8 +82,8 @@ export function applyCocoaPodsModifications(
   );
   let re = /:deterministic_uuids => false/gi;
   src = src.replace(
-      re,
-      ':deterministic_uuids => false, :disable_input_output_paths => true',
+    re,
+    ':deterministic_uuids => false, :disable_input_output_paths => true',
   );
   src = addInstallerBlock(src, 'pre');
   src = addInstallerBlock(src, 'post');
@@ -98,7 +98,7 @@ export function addConstantBlock(
   RNMapboxMapsImpl?: string,
   RNMapboxMapsDownloadToken?: string,
 ): string {
-  const tag = `@rnmapbox/maps-rnmapboxmapsimpl`;
+  const tag = `@mothership/maps-rnmapboxmapsimpl`;
 
   if (RNMapboxMapsImpl == null) {
     const modified = removeGeneratedContents(src, tag);
@@ -161,7 +161,7 @@ export function addMapboxInstallerBlock(
   blockName: InstallerBlockName,
 ): string {
   return mergeContents({
-    tag: `@rnmapbox/maps-${blockName}_installer`,
+    tag: `@mothership/maps-${blockName}_installer`,
     src,
     newSrc: `    $RNMapboxMaps.${blockName}_install(installer)`,
     anchor: new RegExp(`^\\s*${blockName}_install do \\|installer\\|`),
@@ -169,11 +169,9 @@ export function addMapboxInstallerBlock(
     comment: '#',
   }).contents;
 }
-export function addMapboxSetTargetBlock(
-    src: string,
-): string {
+export function addMapboxSetTargetBlock(src: string): string {
   return mergeContents({
-    tag: `@rnmapbox/maps-post_installer`,
+    tag: `@mothership/maps-post_installer`,
     src,
     newSrc: `    $RNMapboxMaps.post_install(installer)
     installer.pods_project.targets.each do |target|
@@ -283,7 +281,7 @@ const addLibCppFilter = (appBuildGradle: string): string => {
   if (appBuildGradle.includes("pickFirst 'lib/x86/libc++_shared.so'"))
     return appBuildGradle;
   return mergeContents({
-    tag: `@rnmapbox/maps-libcpp`,
+    tag: `@mothership/maps-libcpp`,
     src: appBuildGradle,
     newSrc: `packagingOptions {
         pickFirst 'lib/x86/libc++_shared.so'
@@ -351,7 +349,7 @@ function appendContents({
 
 export function addMapboxMavenRepo(src: string): string {
   return appendContents({
-    tag: '@rnmapbox/maps-v2-maven',
+    tag: '@mothership/maps-v2-maven',
     src,
     newSrc: gradleMaven,
     comment: '//',

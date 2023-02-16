@@ -6,12 +6,12 @@ First install the package with [`expo`](https://docs.expo.io/workflow/expo-cli/#
 
 Install the latest release:
 ```sh
-expo install @rnmapbox/maps
+expo install @mothership/mapbox-react-native
 ```
 
 ## Installing other versions
-Replace `@rnmapbox/maps` with the following to install other versions:
-- `rnmapbox/maps#main` installs the latest source from git
+Replace `@mothership/mapbox-react-native` with the following to install other versions:
+- `mothership/mapbox-react-native#main` installs the latest source from git
 
 ## Plugin Configuration
 
@@ -22,7 +22,7 @@ After installing this package, add the [config plugin](https://docs.expo.io/guid
   "expo": {
     "plugins": [
       [
-        "@rnmapbox/maps",
+        "@mothership/mapbox-react-native",
         {
           "RNMapboxMapsImpl": "maplibre"
         }
@@ -39,7 +39,7 @@ For `mapbox` or `mapbox-gl` you'll need to provide `RNMapboxMapsDownloadToken` a
   "expo": {
     "plugins": [
       [
-        "@rnmapbox/maps",
+        "@mothership/mapbox-react-native",
         {
           "RNMapboxMapsImpl": "mapbox",
           "RNMapboxMapsDownloadToken": "sk.ey...qg"

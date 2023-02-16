@@ -4,7 +4,7 @@
 
 The following assumes, that you're using autolinking and installed
 
-`@rnmapbox/maps` via `npm` or `yarn`.
+`@mothership/mapbox-react-native` via `npm` or `yarn`.
 
 <br>
 
@@ -56,7 +56,7 @@ Add the following to the beginning of your podfile
 $RNMapboxMapsImpl = 'mapbox'
 ```
 
-You can also override the version to use. *Warning:* if you set a version, then later update, the `rnamapbox/maps` library it's possible that you'll end up using Mapbox older version than supported. Make sure you revise this value with `rnmapbox/maps` updates.
+You can also override the version to use. *Warning:* if you set a version, then later update, the `rnamapbox/maps` library it's possible that you'll end up using Mapbox older version than supported. Make sure you revise this value with `mothership/mapbox-react-native` updates.
 
 ```ruby
 # Warning: only for advanced use cases, only do this if you know what you're doing.

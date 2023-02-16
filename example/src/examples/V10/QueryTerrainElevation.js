@@ -15,7 +15,7 @@ import {
   Animated,
   MarkerView,
   Atmosphere,
-} from '@rnmapbox/maps';
+} from '@mothership/mapbox-react-native';
 
 import Page from '../common/Page';
 

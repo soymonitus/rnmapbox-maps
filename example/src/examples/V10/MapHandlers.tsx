@@ -6,7 +6,7 @@ import {
   MapState,
   MapView,
   ShapeSource,
-} from '@rnmapbox/maps';
+} from '@mothership/mapbox-react-native';
 import { Feature, GeoJsonProperties, Geometry, Position } from 'geojson';
 import React, { useState } from 'react';
 import { SafeAreaView, View } from 'react-native';

@@ -1,4 +1,4 @@
-import MapboxGL, { SymbolLayerStyle } from '@rnmapbox/maps';
+import MapboxGL, { SymbolLayerStyle } from '@mothership/mapbox-react-native';
 import { Feature } from '@turf/helpers';
 import React, { FC, useState } from 'react';
 import { StyleProp, Text, TextStyle, View, ViewStyle } from 'react-native';
