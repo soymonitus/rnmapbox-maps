@@ -107,6 +107,12 @@ open class RCTMGLMapNavigationView : UIView {
 
 }
 
+extension RCTMGLMapNavigationView {
+    @objc func recenter() {
+        navigationViewController?.recenter()
+    }
+}
+
 extension RCTMGLMapNavigationView: NavigationDelegate {
     func updateNavigationInfo(info: NavigationInfo) {
         let event = RCTMGLEvent(type: .navigationUpdateNavigationInfo, payload: [
