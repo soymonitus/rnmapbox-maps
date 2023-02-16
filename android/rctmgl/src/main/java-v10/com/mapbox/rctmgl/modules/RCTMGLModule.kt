@@ -65,6 +65,9 @@ class RCTMGLModule(private val mReactContext: ReactApplicationContext) : ReactCo
         eventTypes["DidFinishRenderingMap"] = EventTypes.DID_FINISH_RENDERING_MAP
         eventTypes["DidFinishRenderingMapFully"] = EventTypes.DID_FINISH_RENDERING_MAP_FULLY
         eventTypes["DidFinishLoadingStyle"] = EventTypes.DID_FINISH_LOADING_STYLE
+        eventTypes["OnDidArrive"] = EventTypes.MAP_ON_DID_ARRIVE
+        eventTypes["OnShowResumeButton"] = EventTypes.MAP_ON_SHOW_RESUME_BUTTON
+        eventTypes["OnUpdateNavigationInfo"] = EventTypes.MAP_ON_UPDATE_NAVIGATION_INFO
 
         // style source constants
         val styleSourceConsts: MutableMap<String, String> = HashMap()

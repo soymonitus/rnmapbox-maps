@@ -6,13 +6,14 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.mapbox.rctmgl.events.constants.EventKeys;
+import com.mapbox.rctmgl.events.constants.EventTypes;
 
 public class OnShowResumeButtonEvent extends AbstractEvent {
 
     private final boolean mValue;
 
-    public OnShowResumeButtonEvent(boolean value) {
-        super(EventKeys.MAP_ON_SHOW_RESUME_BUTTON);
+    public OnShowResumeButtonEvent(View view, boolean value) {
+        super(view, EventTypes.MAP_ON_SHOW_RESUME_BUTTON);
         mValue = value;
     }
 
@@ -26,13 +27,5 @@ public class OnShowResumeButtonEvent extends AbstractEvent {
         WritableMap properties = new WritableNativeMap();
         properties.putBoolean("showResumeButton", mValue);
         return properties;
-    }
-
-    @Override
-    public boolean canCoalesce() {
-        // Make sure EventDispatcher never merges EventKeys.MAP_ANDROID_CALLBACK events.
-        // These events are couples to unique callbacks references (promises) on the JS side which
-        // each expect response with their corresponding callbackID
-        return false;
     }
 }

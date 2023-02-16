@@ -11,6 +11,10 @@ public class EventTypes {
     public static final String REGION_DID_CHANGE  = "regiondidchange";
     public static final String USER_LOCATION_UPDATED = "userlocationdupdated";
 
+    public static final String MAP_ON_DID_ARRIVE = "onDidArrive";
+    public static final String MAP_ON_SHOW_RESUME_BUTTON = "onShowResumeButton";
+    public static final String MAP_ON_UPDATE_NAVIGATION_INFO = "onUpdateNavigationInfo";
+
     public static final String WILL_START_LOADING_MAP = "willstartloadingmap";
     public static final String DID_FINISH_LOADING_MAP = "didfinishloadingmap";
     public static final String DID_FAIL_LOADING_MAP = "didfailloadingmap";

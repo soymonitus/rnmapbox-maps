@@ -89,6 +89,7 @@ import com.mapbox.rctmgl.events.OnUpdateNavigationInfoEvent
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.mapbox.rctmgl.utils.Logger
 import com.mapbox.rctmgl.R
+import android.os.Handler
 
 
 interface RCTMGLMapNavigationViewLifecycleOwner : LifecycleOwner {
@@ -166,14 +167,15 @@ open class RCTMGLMapNavigationView(private val mContext: Context, var mManager: 
         mapView.camera.addCameraAnimationsLifecycleListener(
             NavigationBasicGesturesHandler(navigationCamera)
         )
+        val _this = this
         navigationCamera.registerNavigationCameraStateChangeObserver { navigationCameraState ->
             // shows/hide the recenter button depending on the camera state
             when (navigationCameraState) {
                 NavigationCameraState.TRANSITION_TO_FOLLOWING,
-                NavigationCameraState.FOLLOWING -> mManager.handleEvent(OnShowResumeButtonEvent(false))
+                NavigationCameraState.FOLLOWING -> mManager.handleEvent(OnShowResumeButtonEvent(_this, false))
                 NavigationCameraState.TRANSITION_TO_OVERVIEW,
                 NavigationCameraState.OVERVIEW,
-                NavigationCameraState.IDLE -> mManager.handleEvent(OnShowResumeButtonEvent(true))
+                NavigationCameraState.IDLE -> mManager.handleEvent(OnShowResumeButtonEvent(_this, true))
             }
         }
         // set the padding values depending on screen orientation and visible view layout
@@ -521,7 +523,7 @@ open class RCTMGLMapNavigationView(private val mContext: Context, var mManager: 
 
     private val arrivalObserver: ArrivalObserver = object : ArrivalObserver {
         override fun onFinalDestinationArrival(routeProgress: RouteProgress) {
-            mManager.handleEvent(OnDidArriveEvent())
+            mManager.handleEvent(OnDidArriveEvent(this@RCTMGLMapNavigationView))
         }
 
         override fun onNextRouteLegStart(routeLegProgress: RouteLegProgress) {
@@ -558,7 +560,7 @@ open class RCTMGLMapNavigationView(private val mContext: Context, var mManager: 
             }
         )
 
-        mManager.handleEvent(OnUpdateNavigationInfoEvent(routeProgress.distanceRemaining.toDouble(), routeProgress.durationRemaining.toDouble()))
+        mManager.handleEvent(OnUpdateNavigationInfoEvent(this, routeProgress.distanceRemaining.toDouble(), routeProgress.durationRemaining.toDouble()))
     }
 
     /**
@@ -622,7 +624,9 @@ open class RCTMGLMapNavigationView(private val mContext: Context, var mManager: 
 
         replayOriginLocation()
 
-        startNavigation()
+        Handler().postDelayed({
+            startNavigation()
+        }, 1000)
     }
 
     private fun replayOriginLocation() {
