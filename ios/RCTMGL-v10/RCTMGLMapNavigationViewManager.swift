@@ -9,11 +9,11 @@ class RCTMGLMapNavigationViewManager: RCTViewManager {
     override static func requiresMainQueueSetup() -> Bool {
         return true
     }
-    
+
     func defaultFrame() -> CGRect {
         return UIScreen.main.bounds
     }
-    
+
     override func view() -> UIView! {
         let result = RCTMGLMapNavigationView(frame: self.defaultFrame())
         return result
@@ -37,7 +37,7 @@ extension RCTMGLMapNavigationViewManager {
           rejecter(name, "Unknown find reactTag: \(reactTag)", nil)
           return;
         }
-      
+
         fn(view)
       }
     }
@@ -57,7 +57,18 @@ extension RCTMGLMapNavigationViewManager {
         resolver(nil)
       }
     }
-    
+
+    @objc
+    func recenter(_ reactTag: NSNumber,
+                  resolver: @escaping RCTPromiseResolveBlock,
+                  rejecter: @escaping RCTPromiseRejectBlock
+    ) -> Void {
+      withMapNavigationView(reactTag, name:"recenter", rejecter: rejecter) { view in
+        view.recenter()
+        resolver(nil)
+      }
+    }
+
     @objc
     func isVoiceMuted(_ reactTag: NSNumber,
                   resolver: @escaping RCTPromiseResolveBlock,

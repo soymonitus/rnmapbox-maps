@@ -18,6 +18,7 @@ import com.mapbox.rctmgl.components.annotation.RCTMGLMarkerViewManager;
 import com.mapbox.rctmgl.components.images.RCTMGLImagesManager;
 import com.mapbox.rctmgl.components.location.RCTMGLNativeUserLocationManager;
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapViewManager;
+import com.mapbox.rctmgl.components.mapnavigationview.RCTMGLMapNavigationViewManager;
 import com.mapbox.rctmgl.components.mapview.RCTMGLAndroidTextureMapViewManager;
 import com.mapbox.rctmgl.components.styles.atmosphere.RCTMGLAtmosphereManager;
 import com.mapbox.rctmgl.components.styles.layers.RCTMGLBackgroundLayerManager;
@@ -77,6 +78,7 @@ public class RCTMGLPackage implements ReactPackage {
         managers.add(new RCTMGLCameraManager(reactApplicationContext));
         managers.add(new RCTMGLAndroidTextureMapViewManager(reactApplicationContext));
         managers.add(new RCTMGLMapViewManager(reactApplicationContext));
+        managers.add(new RCTMGLMapNavigationViewManager(reactApplicationContext));
 
         // annotations
         managers.add(new RCTMGLMarkerViewManager(reactApplicationContext));

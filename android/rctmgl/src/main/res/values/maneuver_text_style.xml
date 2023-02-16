@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyMapboxStylePrimaryManeuver" parent="MapboxStylePrimaryManeuver">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="MyMapboxStyleSecondaryManeuver" parent="MapboxStyleSecondaryManeuver">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="MyMapboxStyleStepDistance" parent="MapboxStyleStepDistance">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="MyMapboxStyleSubManeuver" parent="MapboxStyleSubManeuver">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="MyMapboxStyleManeuverView" parent="MapboxStyleManeuverView">
+        <item name="maneuverViewBackgroundColor">#000000</item>
+        <item name="subManeuverViewBackgroundColor">#000000</item>
+        <item name="upcomingManeuverViewBackgroundColor">#000000</item>
+    </style>
+    <color name="maneuverBackgroundColor">#000000</color>
+</resources>

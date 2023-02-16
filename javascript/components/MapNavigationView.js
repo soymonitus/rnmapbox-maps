@@ -7,7 +7,7 @@ import {
   requireNativeComponent,
 } from 'react-native';
 
-import { isFunction, viewPropTypes } from '../utils';
+import { isAndroid, isFunction, viewPropTypes } from '../utils';
 
 import NativeBridgeComponent from './NativeBridgeComponent';
 
@@ -78,6 +78,10 @@ class MapNavigationView extends NativeBridgeComponent(
     return res.isVoiceMuted;
   }
 
+  async recenter() {
+    const res = await this._runNativeCommand('recenter', this._nativeRef);
+  }
+
   _onShowResumeButton(e) {
     if (isFunction(this.props.onShowResumeButton)) {
       this.props.onShowResumeButton(e.nativeEvent.payload);
@@ -139,6 +143,7 @@ class MapNavigationView extends NativeBridgeComponent(
       onShowResumeButton: this._onShowResumeButton,
       onDidArrive: this._onDidArrive,
       onUpdateNavigationInfo: this._onUpdateNavigationInfo,
+      onAndroidCallback: isAndroid() ? this._onAndroidCallback : undefined,
     };
 
     let mapView = (
@@ -163,7 +168,7 @@ const RCTMGLMapNavigationView = requireNativeComponent(
   NATIVE_MODULE_NAME,
   MapNavigationView,
   {
-    nativeOnly: {},
+    nativeOnly: { onAndroidCallback: true },
   },
 );
 

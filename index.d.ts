@@ -327,6 +327,8 @@ declare namespace MapboxGL {
   export class MapNavigationView extends Component<MapNavigationViewProps> {
     setVoiceMuted(voiceMuted: boolean): void;
     isVoiceMuted(): Promise<VoiceMutedResult>;
+
+    recenter(): void;
   }
 
   type Padding = number | [number, number] | [number, number, number, number];
@@ -599,30 +601,26 @@ export interface MapViewProps extends ViewProps {
 }
 
 export type ShowResumeButtonCallback = (
-    event: MapboxGLEvent<
-        'navigationShowResumeButton',
-        {
-          showResumeButton: boolean,
-        }
-    >,
+  event: MapboxGLEvent<
+    'navigationShowResumeButton',
+    {
+      showResumeButton: boolean;
+    }
+  >,
 ) => void;
 
 export type DidArriveCallback = (
-    event: MapboxGLEvent<
-        'navigationDidArrive',
-        {
-        }
-    >,
+  event: MapboxGLEvent<'navigationDidArrive', {}>,
 ) => void;
 
 export type UpdateNavigationInfoCallback = (
-    event: MapboxGLEvent<
-        'navigationUpdateNavigationInfo',
-        {
-          distanceRemaining: number,
-          durationRemaining: number,
-        }
-    >,
+  event: MapboxGLEvent<
+    'navigationUpdateNavigationInfo',
+    {
+      distanceRemaining: number;
+      durationRemaining: number;
+    }
+  >,
 ) => void;
 
 export interface MapNavigationViewProps extends ViewProps {

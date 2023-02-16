@@ -15,6 +15,10 @@ public class EventKeys {
     public static final String MAP_ANDROID_CALLBACK = ns("map.androidcallback");
     public static final String MAP_USER_TRACKING_MODE_CHANGE = ns("map.usertrackingmodechange");
 
+    public static final String MAP_ON_DID_ARRIVE = ns("mapnavigation.onDidArrive");
+    public static final String MAP_ON_SHOW_RESUME_BUTTON = ns("mapnavigation.onShowResumeButton");
+    public static final String MAP_ON_UPDATE_NAVIGATION_INFO = ns("mapnavigation.onUpdateNavigationInfo");
+
     // point annotation events
     public static final String POINT_ANNOTATION_SELECTED = ns("pointannotation.selected");
     public static final String POINT_ANNOTATION_DESELECTED = ns("pointannotation.deselected");
