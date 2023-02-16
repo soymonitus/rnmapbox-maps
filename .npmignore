@@ -38,7 +38,7 @@ android/gradlew
 android/gradlew.bat
 android/local.properties
 
-# mothership/mapbox-react-native
+# rnmapbox/maps
 example
 __tests__
 coverage

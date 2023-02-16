@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Animated } from 'react-native';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 
 const styles = {
   innerCircle: {

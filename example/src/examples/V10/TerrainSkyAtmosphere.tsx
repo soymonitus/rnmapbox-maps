@@ -8,7 +8,7 @@ import {
   RasterDemSource,
   Atmosphere,
   Camera,
-} from '@mothership/mapbox-react-native';
+} from '@rnmapbox/maps';
 
 import Page from '../common/Page';
 import { BaseExampleProps } from '../common/BaseExamplePropTypes';

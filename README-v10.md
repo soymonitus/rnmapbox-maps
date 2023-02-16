@@ -4,7 +4,7 @@
 ```shell
 react-native init sample --version 0.60.5
 cd sample
-yarn add https://github.com/mothership/mapbox-react-native#main --save
+yarn add https://github.com/rnmapbox/maps#main --save
 
 code android/build.gradle 
 ```

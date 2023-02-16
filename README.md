@@ -12,7 +12,7 @@
 </tr>
 </table>
 
-|  [![npm version](https://badge.fury.io/js/%40rnmapbox%2Fmaps.svg)](https://badge.fury.io/js/%40rnmapbox%2Fmaps)  | [![iOS & Android Build](https://github.com/mothership/mapbox-react-native/actions/workflows/on-push.yml/badge.svg?branch=main)](https://github.com/mothership/mapbox-react-native/actions/workflows/on-push.yml?branch=main)  |
+|  [![npm version](https://badge.fury.io/js/%40rnmapbox%2Fmaps.svg)](https://badge.fury.io/js/%40rnmapbox%2Fmaps)  | [![iOS & Android Build](https://github.com/rnmapbox/maps/actions/workflows/on-push.yml/badge.svg?branch=main)](https://github.com/rnmapbox/maps/actions/workflows/on-push.yml?branch=main)  |
 |---|---|
 
 
@@ -21,11 +21,11 @@ _A community-supported, open-source React Native library for building maps with 
 
 ---
 ## News & Discussions
-#### <span style="color:red">&rarr;</span> Future of this repo: participate in the [discussion thread](https://github.com/mothership/mapbox-react-native/discussions/1680)
+#### <span style="color:red">&rarr;</span> Future of this repo: participate in the [discussion thread](https://github.com/rnmapbox/maps/discussions/1680)
 
-#### <span style="color:red">&rarr;</span> Call for additional maintainers [discussion thread](https://github.com/mothership/mapbox-react-native/discussions/1551)
+#### <span style="color:red">&rarr;</span> Call for additional maintainers [discussion thread](https://github.com/rnmapbox/maps/discussions/1551)
 
-#### <span style="color:red">&rarr;</span> This README is for the unreleased 10* branch. Please see [v8 branch](https://github.com/mothership/mapbox-react-native/tree/v8) for documentation on 8.* releases
+#### <span style="color:red">&rarr;</span> This README is for the unreleased 10* branch. Please see [v8 branch](https://github.com/rnmapbox/maps/tree/v8) for documentation on 8.* releases
 ---
 
 <table>
@@ -94,18 +94,18 @@ _See [iOS](ios/install.md) & [Android](android/install.md) setup guide for more 
 #### Using `yarn`
 Install the latest source from git:
 ```sh
-yarn add mothership/mapbox-react-native#main
+yarn add rnmapbox/maps#main
 ``` 
 
 #### Using `npm`
 Install the latest source from git:
 ```sh
-npm install --save mothership/mapbox-react-native#main
+npm install --save rnmapbox/maps#main
 ``` 
 
 #### Installing other versions
-Replace `mothership/mapbox-react-native#main` with the following to install other versions:
-- `@mothership/mapbox-react-native` installs the latest release
+Replace `rnmapbox/maps#main` with the following to install other versions:
+- `@rnmapbox/maps` installs the latest release
 
 
 #### Using `expo`
@@ -147,7 +147,7 @@ npm run android
 ```js
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 
 MapboxGL.setAccessToken('<YOUR_ACCESSTOKEN>');
 
@@ -241,16 +241,16 @@ Example:
 ```json
 "jest": {
   "preset": "react-native",
-  "setupFilesAfterEnv": ["@mothership/mapbox-react-native/setup-jest"],
+  "setupFilesAfterEnv": ["@rnmapbox/maps/setup-jest"],
   "transformIgnorePatterns": [
-      "node_modules/(?!(...|@mothership))"
+      "node_modules/(?!(...|@rnmapbox))"
   ]
 }
 ```
 ---
 ## Sponsors
 
-Help drive this repo forward - be a sponsor. Add a comment [here](https://github.com/mothership/mapbox-react-native/discussions/1551) to discuss your sponsorship.
+Help drive this repo forward - be a sponsor. Add a comment [here](https://github.com/rnmapbox/maps/discussions/1551) to discuss your sponsorship.
 
 <table style="border: none; border-width: 0px">
 <tr>

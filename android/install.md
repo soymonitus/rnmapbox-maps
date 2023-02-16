@@ -12,7 +12,7 @@ Add `RNMapboxMapsImpl = "mapbox"` to your gradle file - see bellow for details.
 
 ### Setting RNMapboxMapsImpl to v10
 
-*Warning*: If you set a custom version, make sure you revisit, any time you update @mothership/mapbox-react-native. Setting it to earlier version than what we exepect will likely result in a build error.
+*Warning*: If you set a custom version, make sure you revisit, any time you update @rnmapbox/maps. Setting it to earlier version than what we exepect will likely result in a build error.
 
 Overwrite mapbox dependencies within your `android/build.gradle > buildscript > ext` section
 
@@ -59,7 +59,7 @@ allprojects {
 
 ### Using non default mapbox version
 
-*Warning*: If you set a custom version, make sure you revisit, any time you update @mothership/mapbox-react-native. Setting it to earlier version than what we exepect will likely result in a build error.
+*Warning*: If you set a custom version, make sure you revisit, any time you update @rnmapbox/maps. Setting it to earlier version than what we exepect will likely result in a build error.
 
 Set `RNMapboxMapsLibs` in `android/build.gradle > buildscript > ext` section
 
@@ -109,7 +109,7 @@ buildscript {
 }
 ```
 
-Feel free to check out the `/example` projects [`android/build.gradle`](https://github.com/mothership/mapbox-react-native/blob/main/example/android/build.gradle) for inspiration!
+Feel free to check out the `/example` projects [`android/build.gradle`](https://github.com/rnmapbox/maps/blob/main/example/android/build.gradle) for inspiration!
 
 
 ## Mapbox Maps GL Native SDK (pre v10)
@@ -118,7 +118,7 @@ Feel free to check out the `/example` projects [`android/build.gradle`](https://
 ### Custom versions
 
 We've set up default Mapbox dependencies for you.  
-Feel free to check em out [here](https://github.com/mothership/mapbox-react-native/blob/eca4858744cab134b06ae455bcdacc63233318a5/android/rctmgl/build.gradle#L55-L76)
+Feel free to check em out [here](https://github.com/rnmapbox/maps/blob/eca4858744cab134b06ae455bcdacc63233318a5/android/rctmgl/build.gradle#L55-L76)
 
 However, it is also possible to set a custom version of the [Mapbox SDK](https://github.com/mapbox/mapbox-gl-native-android)  
 Which will overwrite our defaults.
@@ -178,7 +178,7 @@ allprojects {
 }
 ```
 
-Feel free to check out the `/example` projects [`android/build.gradle`](https://github.com/mothership/mapbox-react-native/blob/main/example/android/build.gradle) for inspiration!
+Feel free to check out the `/example` projects [`android/build.gradle`](https://github.com/rnmapbox/maps/blob/main/example/android/build.gradle) for inspiration!
 
 <br>
 

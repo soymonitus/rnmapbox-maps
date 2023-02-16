@@ -6,12 +6,12 @@
   close: true
 "Needs: Standalone component":
   comment: >
-    :wave: @{issue-author}, please include a [complete, isolated example](https://github.com/mothership/mapbox-react-native/wiki/Issue-missing-standalone-component)
+    :wave: @{issue-author}, please include a [complete, isolated example](https://github.com/rnmapbox/maps/wiki/Issue-missing-standalone-component) 
   # Close the issue
   close: true
 "question":
   comment: >
-    :thinking: @{issue-author}, this is rather a question than an issue<br>please use our [discussions](https://github.com/mothership/mapbox-react-native/discussions) or [gitter](https://gitter.im/rnmapbox/Lobby) or stackoverflow for this.
+    :thinking: @{issue-author}, this is rather a question than an issue<br>please use our [discussions](https://github.com/rnmapbox/maps/discussions) or [gitter](https://gitter.im/rnmapbox/Lobby) or stackoverflow for this.
   # Close the issue
   close: true
 "stale":

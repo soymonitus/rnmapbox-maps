@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 import { Button, StyleSheet, Text } from 'react-native';
 import { Divider } from '@rneui/base';
 

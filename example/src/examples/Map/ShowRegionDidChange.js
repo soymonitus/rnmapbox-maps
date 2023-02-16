@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 
 import sheet from '../../styles/sheet';
 import { DEFAULT_CENTER_COORDINATE, SF_OFFICE_COORDINATE } from '../../utils';

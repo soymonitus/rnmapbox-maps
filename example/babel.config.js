@@ -14,7 +14,7 @@ module.exports = (api) => {
             'module-resolver',
             {
               alias: {
-                '@mothership/mapbox-react-native': './rnmapbox.web.symlink',
+                '@rnmapbox/maps': './rnmapbox.web.symlink',
               },
             },
           ]
@@ -22,7 +22,7 @@ module.exports = (api) => {
             'module-resolver',
             {
               alias: {
-                '@mothership/mapbox-react-native': '../javascript',
+                '@rnmapbox/maps': '../javascript',
                 react: './node_modules/react',
                 'react-native': './node_modules/react-native',
                 '@babel': './node_modules/@babel',

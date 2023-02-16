@@ -1,5 +1,5 @@
 import React from 'react';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 import { StyleSheet, Text, View, LogBox, SafeAreaView } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';

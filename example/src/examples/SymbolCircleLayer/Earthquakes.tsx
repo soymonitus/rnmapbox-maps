@@ -7,7 +7,7 @@ import MapboxGL, {
   ShapeSource,
   SymbolLayer,
   SymbolLayerStyle,
-} from '@mothership/mapbox-react-native';
+} from '@rnmapbox/maps';
 import { FeatureCollection } from 'geojson';
 import moment from 'moment';
 import React, { useRef, useState } from 'react';

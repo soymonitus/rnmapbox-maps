@@ -8,7 +8,7 @@ import {
   PointAnnotation,
   ShapeSource,
   getAnnotationsLayerID,
-} from '@mothership/mapbox-react-native';
+} from '@rnmapbox/maps';
 import { Feature, Point, Position } from 'geojson';
 import { Button } from '@rneui/base';
 

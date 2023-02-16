@@ -4,7 +4,7 @@ import {
   MapView,
   ShapeSource,
   SymbolLayer,
-} from '@mothership/mapbox-react-native';
+} from '@rnmapbox/maps';
 import { FeatureCollection } from 'geojson';
 import React, { useState } from 'react';
 import { Button } from 'react-native';

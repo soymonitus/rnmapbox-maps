@@ -1,5 +1,5 @@
 import React from 'react';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 
 import sheet from '../../styles/sheet';
 import smileyFaceGeoJSON from '../../assets/smiley_face.json';

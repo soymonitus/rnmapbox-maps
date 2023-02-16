@@ -1,5 +1,5 @@
 import React from 'react';
-import MapboxGL from '@mothership/mapbox-react-native';
+import MapboxGL from '@rnmapbox/maps';
 import { Text } from 'react-native';
 
 import Bubble from '../common/Bubble';

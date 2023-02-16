@@ -8,7 +8,7 @@ import {
   Logger,
   MapView,
   ShapeSource,
-} from '@mothership/mapbox-react-native';
+} from '@rnmapbox/maps';
 import bbox from '@turf/bbox';
 import { Feature, Point, Position } from 'geojson';
 import React, { memo, useCallback, useMemo, useState } from 'react';

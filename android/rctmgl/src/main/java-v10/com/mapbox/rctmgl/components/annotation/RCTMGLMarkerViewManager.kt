@@ -53,7 +53,7 @@ class RCTMGLMarkerViewManager(reactApplicationContext: ReactApplicationContext?)
         const val REACT_CLASS = "RCTMGLMarkerView"
 
         fun markerViewContainerSizeFixer(mapView: RCTMGLMapView, viewAnnotationManager: ViewAnnotationManager) {
-            // see https://github.com/mothership/mapbox-react-native/issues/2376
+            // see https://github.com/rnmapbox/maps/issues/2376
             viewAnnotationManager.addOnViewAnnotationUpdatedListener(object :
                 OnViewAnnotationUpdatedListener {
                 override fun onViewAnnotationVisibilityUpdated(view: View, visible: Boolean) {

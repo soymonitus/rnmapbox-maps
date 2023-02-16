@@ -402,7 +402,7 @@ class MapView extends NativeBridgeComponent(
         );
         if (props.onRegionDidChange) {
           console.warn(
-            'mothership/mapbox-react-native: only one of MapView.onRegionDidChange or onMapIdle is supported',
+            'rnmapbox/maps: only one of MapView.onRegionDidChange or onMapIdle is supported',
           );
         }
       }
@@ -412,7 +412,7 @@ class MapView extends NativeBridgeComponent(
         );
         if (props.onRegionIsChanging) {
           console.warn(
-            'mothership/mapbox-react-native: only one of MapView.onRegionIsChanging or onCameraChanged is supported',
+            'rnmapbox/maps: only one of MapView.onRegionIsChanging or onCameraChanged is supported',
           );
         }
       }

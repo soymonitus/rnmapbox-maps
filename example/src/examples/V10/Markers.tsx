@@ -1,10 +1,5 @@
 import { Button, Divider, Text } from '@rneui/base';
-import {
-  Camera,
-  Logger,
-  MapView,
-  MarkerView,
-} from '@mothership/mapbox-react-native';
+import { Camera, Logger, MapView, MarkerView } from '@rnmapbox/maps';
 import { Position } from 'geojson';
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';

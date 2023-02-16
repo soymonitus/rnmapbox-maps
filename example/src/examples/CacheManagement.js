@@ -1,5 +1,5 @@
 import React from 'react';
-import MapboxGL, { MapView, Camera } from '@mothership/mapbox-react-native';
+import MapboxGL, { MapView, Camera } from '@rnmapbox/maps';
 import {
   Alert,
   StyleSheet,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapView, Camera } from '@mothership/mapbox-react-native';
+import { MapView, Camera } from '@rnmapbox/maps';
 
 import sheet from '../../styles/sheet';
 import BaseExamplePropTypes from '../common/BaseExamplePropTypes';
